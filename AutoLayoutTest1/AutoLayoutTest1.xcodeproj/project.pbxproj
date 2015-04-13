@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3521B8A1ADBD53A00AC9502 /* RightToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3521B891ADBD53A00AC9502 /* RightToolView.xib */; };
+		D3521B921ADBDE4300AC9502 /* SlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */; };
 		F65669271ADAA35C0054F48F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669261ADAA35C0054F48F /* main.m */; };
 		F656692A1ADAA35C0054F48F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669291ADAA35C0054F48F /* AppDelegate.m */; };
 		F656692D1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F656692B1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld */; };
@@ -30,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3521B891ADBD53A00AC9502 /* RightToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RightToolView.xib; path = ../RightToolView.xib; sourceTree = "<group>"; };
+		D3521B901ADBDE4300AC9502 /* SlideSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideSwitchView.h; sourceTree = "<group>"; };
+		D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideSwitchView.m; sourceTree = "<group>"; };
 		F65669211ADAA35C0054F48F /* AutoLayoutTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65669251ADAA35C0054F48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65669261ADAA35C0054F48F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +105,9 @@
 				F65669241ADAA35C0054F48F /* Supporting Files */,
 				F656694F1ADAB7D00054F48F /* MyNavigationController.h */,
 				F65669501ADAB7D00054F48F /* MyNavigationController.m */,
+				D3521B891ADBD53A00AC9502 /* RightToolView.xib */,
+				D3521B901ADBDE4300AC9502 /* SlideSwitchView.h */,
+				D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */,
 			);
 			path = AutoLayoutTest1;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				F656694E1ADAAEB70054F48F /* RestaurantLayout.xib in Resources */,
 				F65669331ADAA35C0054F48F /* Main.storyboard in Resources */,
 				F65669381ADAA35C0054F48F /* LaunchScreen.xib in Resources */,
+				D3521B8A1ADBD53A00AC9502 /* RightToolView.xib in Resources */,
 				F65669351ADAA35C0054F48F /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -235,6 +244,7 @@
 				F65669511ADAB7D00054F48F /* MyNavigationController.m in Sources */,
 				F656692A1ADAA35C0054F48F /* AppDelegate.m in Sources */,
 				F65669301ADAA35C0054F48F /* ViewController.m in Sources */,
+				D3521B921ADBDE4300AC9502 /* SlideSwitchView.m in Sources */,
 				F65669271ADAA35C0054F48F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +374,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutTest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -374,6 +385,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AutoLayoutTest1/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -432,6 +444,7 @@
 				F65669491ADAA35C0054F48F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F656694A1ADAA35C0054F48F /* Build configuration list for PBXNativeTarget "AutoLayoutTest1Tests" */ = {
 			isa = XCConfigurationList;
@@ -440,6 +453,7 @@
 				F656694C1ADAA35C0054F48F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

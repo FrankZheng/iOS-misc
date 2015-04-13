@@ -25,11 +25,16 @@
     NSLog(@"view frame is %@", NSStringFromCGRect(self.view.frame));
     self.title = @"Restaurant Layout";
     
-}
-
--(UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
+    UIViewController *toolViewControler = [[UIViewController alloc] initWithNibName:@"RightToolView" bundle:nil];
+    NSLog(@"tool view frame is %@", NSStringFromCGRect( toolViewControler.view.frame));
+    CGSize toolViewSize = toolViewControler.view.frame.size;
+    toolViewControler.view.frame = CGRectMake(CGRectGetWidth(self.view.frame) - toolViewSize.width,
+                                              (CGRectGetHeight(self.view.frame) - toolViewSize.height) / 2,
+                                              toolViewSize.width, toolViewSize.height);
+    
+    [self.view addSubview:toolViewControler.view];
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
