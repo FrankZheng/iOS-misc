@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SlideSwitchView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <SlideSwitchViewDelegate>
 
 
 @end

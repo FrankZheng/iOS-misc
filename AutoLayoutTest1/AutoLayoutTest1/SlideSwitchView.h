@@ -118,7 +118,7 @@
  * @param tab索引
  * @result
  */
-- (void)slideSwitchView:(SlideSwitchView *)view didselectTab:(NSUInteger)number;
+- (void)slideSwitchView:(SlideSwitchView *)view didSelectTab:(NSUInteger)number;
 
 @end
 

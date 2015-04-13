@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		D3521B8A1ADBD53A00AC9502 /* RightToolView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3521B891ADBD53A00AC9502 /* RightToolView.xib */; };
 		D3521B921ADBDE4300AC9502 /* SlideSwitchView.m in Sources */ = {isa = PBXBuildFile; fileRef = D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */; };
+		D3521B971ADBE25100AC9502 /* icon_rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B941ADBE25100AC9502 /* icon_rightarrow.png */; };
+		D3521B981ADBE25100AC9502 /* icon_rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B951ADBE25100AC9502 /* icon_rightarrow@2x.png */; };
+		D3521B991ADBE25100AC9502 /* red_line_and_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B961ADBE25100AC9502 /* red_line_and_shadow@2x.png */; };
 		F65669271ADAA35C0054F48F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669261ADAA35C0054F48F /* main.m */; };
 		F656692A1ADAA35C0054F48F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669291ADAA35C0054F48F /* AppDelegate.m */; };
 		F656692D1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F656692B1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld */; };
@@ -35,6 +38,9 @@
 		D3521B891ADBD53A00AC9502 /* RightToolView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RightToolView.xib; path = ../RightToolView.xib; sourceTree = "<group>"; };
 		D3521B901ADBDE4300AC9502 /* SlideSwitchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideSwitchView.h; sourceTree = "<group>"; };
 		D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideSwitchView.m; sourceTree = "<group>"; };
+		D3521B941ADBE25100AC9502 /* icon_rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rightarrow.png; sourceTree = "<group>"; };
+		D3521B951ADBE25100AC9502 /* icon_rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_rightarrow@2x.png"; sourceTree = "<group>"; };
+		D3521B961ADBE25100AC9502 /* red_line_and_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_line_and_shadow@2x.png"; sourceTree = "<group>"; };
 		F65669211ADAA35C0054F48F /* AutoLayoutTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65669251ADAA35C0054F48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65669261ADAA35C0054F48F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -72,6 +78,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3521B931ADBE22200AC9502 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				D3521B941ADBE25100AC9502 /* icon_rightarrow.png */,
+				D3521B951ADBE25100AC9502 /* icon_rightarrow@2x.png */,
+				D3521B961ADBE25100AC9502 /* red_line_and_shadow@2x.png */,
+			);
+			name = assets;
+			sourceTree = "<group>";
+		};
 		F65669181ADAA35C0054F48F = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +109,7 @@
 		F65669231ADAA35C0054F48F /* AutoLayoutTest1 */ = {
 			isa = PBXGroup;
 			children = (
+				D3521B931ADBE22200AC9502 /* assets */,
 				F65669281ADAA35C0054F48F /* AppDelegate.h */,
 				F65669291ADAA35C0054F48F /* AppDelegate.m */,
 				F656692E1ADAA35C0054F48F /* ViewController.h */,
@@ -218,9 +235,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3521B991ADBE25100AC9502 /* red_line_and_shadow@2x.png in Resources */,
 				F656694E1ADAAEB70054F48F /* RestaurantLayout.xib in Resources */,
 				F65669331ADAA35C0054F48F /* Main.storyboard in Resources */,
 				F65669381ADAA35C0054F48F /* LaunchScreen.xib in Resources */,
+				D3521B981ADBE25100AC9502 /* icon_rightarrow@2x.png in Resources */,
+				D3521B971ADBE25100AC9502 /* icon_rightarrow.png in Resources */,
 				D3521B8A1ADBD53A00AC9502 /* RightToolView.xib in Resources */,
 				F65669351ADAA35C0054F48F /* Images.xcassets in Resources */,
 			);
@@ -404,6 +424,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AutoLayoutTest1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutTest1.app/AutoLayoutTest1";
@@ -419,6 +440,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AutoLayoutTest1Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AutoLayoutTest1.app/AutoLayoutTest1";

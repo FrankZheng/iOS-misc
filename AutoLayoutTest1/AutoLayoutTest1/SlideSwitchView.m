@@ -134,8 +134,8 @@ static const NSUInteger kTagOfRightSideButton = 999;
     [self createNameButtons];
     
     //选中第一个view
-    if (self.slideSwitchViewDelegate && [self.slideSwitchViewDelegate respondsToSelector:@selector(slideSwitchView:didselectTab:)]) {
-        [self.slideSwitchViewDelegate slideSwitchView:self didselectTab:_userSelectedChannelID - 100];
+    if (self.slideSwitchViewDelegate && [self.slideSwitchViewDelegate respondsToSelector:@selector(slideSwitchView:didSelectTab:)]) {
+        [self.slideSwitchViewDelegate slideSwitchView:self didSelectTab:_userSelectedChannelID - 100];
     }
     
     _isBuildUI = YES;
@@ -235,8 +235,8 @@ static const NSUInteger kTagOfRightSideButton = 999;
                 }
                 _isRootScroll = NO;
                 
-                if (self.slideSwitchViewDelegate && [self.slideSwitchViewDelegate respondsToSelector:@selector(slideSwitchView:didselectTab:)]) {
-                    [self.slideSwitchViewDelegate slideSwitchView:self didselectTab:_userSelectedChannelID - 100];
+                if (self.slideSwitchViewDelegate && [self.slideSwitchViewDelegate respondsToSelector:@selector(slideSwitchView:didSelectTab:)]) {
+                    [self.slideSwitchViewDelegate slideSwitchView:self didSelectTab:_userSelectedChannelID - 100];
                 }
             }
         }];
