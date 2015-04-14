@@ -12,6 +12,7 @@
 		D3521B971ADBE25100AC9502 /* icon_rightarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B941ADBE25100AC9502 /* icon_rightarrow.png */; };
 		D3521B981ADBE25100AC9502 /* icon_rightarrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B951ADBE25100AC9502 /* icon_rightarrow@2x.png */; };
 		D3521B991ADBE25100AC9502 /* red_line_and_shadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D3521B961ADBE25100AC9502 /* red_line_and_shadow@2x.png */; };
+		D3FB44DF1ADCC50E00C09FBC /* RightToolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FB44DE1ADCC50E00C09FBC /* RightToolViewController.m */; };
 		F65669271ADAA35C0054F48F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669261ADAA35C0054F48F /* main.m */; };
 		F656692A1ADAA35C0054F48F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F65669291ADAA35C0054F48F /* AppDelegate.m */; };
 		F656692D1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F656692B1ADAA35C0054F48F /* AutoLayoutTest1.xcdatamodeld */; };
@@ -41,6 +42,8 @@
 		D3521B941ADBE25100AC9502 /* icon_rightarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_rightarrow.png; sourceTree = "<group>"; };
 		D3521B951ADBE25100AC9502 /* icon_rightarrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_rightarrow@2x.png"; sourceTree = "<group>"; };
 		D3521B961ADBE25100AC9502 /* red_line_and_shadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_line_and_shadow@2x.png"; sourceTree = "<group>"; };
+		D3FB44DD1ADCC50E00C09FBC /* RightToolViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightToolViewController.h; sourceTree = "<group>"; };
+		D3FB44DE1ADCC50E00C09FBC /* RightToolViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightToolViewController.m; sourceTree = "<group>"; };
 		F65669211ADAA35C0054F48F /* AutoLayoutTest1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutTest1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F65669251ADAA35C0054F48F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F65669261ADAA35C0054F48F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				D3521B891ADBD53A00AC9502 /* RightToolView.xib */,
 				D3521B901ADBDE4300AC9502 /* SlideSwitchView.h */,
 				D3521B911ADBDE4300AC9502 /* SlideSwitchView.m */,
+				D3FB44DD1ADCC50E00C09FBC /* RightToolViewController.h */,
+				D3FB44DE1ADCC50E00C09FBC /* RightToolViewController.m */,
 			);
 			path = AutoLayoutTest1;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				F656692A1ADAA35C0054F48F /* AppDelegate.m in Sources */,
 				F65669301ADAA35C0054F48F /* ViewController.m in Sources */,
 				D3521B921ADBDE4300AC9502 /* SlideSwitchView.m in Sources */,
+				D3FB44DF1ADCC50E00C09FBC /* RightToolViewController.m in Sources */,
 				F65669271ADAA35C0054F48F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

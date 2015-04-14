@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "RightToolViewController.h"
 
 
 
@@ -20,6 +21,7 @@
 @property(nonatomic, strong) NSMutableArray *subViewContollers;
 @property(nonatomic, strong) SlideSwitchView *slideSwitchView;
 @property(nonatomic, strong) NSMutableDictionary *items;
+@property(nonatomic, strong) RightToolViewController *rightToolViewController;
 
 @end
 
@@ -35,6 +37,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     
     //add tool view
+#if 0
     UIViewController *toolViewControler = [[UIViewController alloc] initWithNibName:@"RightToolView" bundle:nil];
     NSLog(@"tool view frame is %@", NSStringFromCGRect( toolViewControler.view.frame));
     CGSize toolViewSize = toolViewControler.view.frame.size;
@@ -43,6 +46,16 @@
                                               toolViewSize.width, toolViewSize.height);
     
     [self.view addSubview:toolViewControler.view];
+#else
+    CGSize toolViewSize = CGSizeMake(300, 600);//hardcode for now
+    CGRect toolViewFrame = CGRectMake(CGRectGetWidth(self.view.frame) - toolViewSize.width,
+               (CGRectGetHeight(self.view.frame) - toolViewSize.height) / 2,
+               toolViewSize.width, toolViewSize.height);
+    _rightToolViewController = [[RightToolViewController alloc] initWithFrame:toolViewFrame];
+    
+    [self.view addSubview:_rightToolViewController.view];
+    
+#endif
     
     //add slide switch view
     [self initSubViewControllers];
