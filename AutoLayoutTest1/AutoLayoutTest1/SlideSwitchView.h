@@ -29,6 +29,7 @@
     UIImage *_tabItemNormalBackgroundImage;         //正常时tab的背景
     UIImage *_tabItemSelectedBackgroundImage;       //选中时tab的背景
     NSMutableArray *_viewArray;                     //主视图的子视图数组
+    NSMutableArray *_nameButtons;
     
     UIButton *_rigthSideButton;                     //右侧按钮
     
@@ -57,6 +58,11 @@
  * @result
  */
 - (void)buildUI;
+
+
+-(void)reloadData;
+
+-(void)selectTab:(NSInteger)number;
 
 /*!
  * @method 通过16进制计算颜色

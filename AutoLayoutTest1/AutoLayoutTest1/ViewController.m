@@ -19,6 +19,7 @@
 
 @property(nonatomic, strong) NSMutableArray *subViewContollers;
 @property(nonatomic, strong) SlideSwitchView *slideSwitchView;
+@property(nonatomic, strong) NSMutableDictionary *items;
 
 @end
 
@@ -58,11 +59,13 @@
     
     [self.view addSubview:_slideSwitchView];
     
+    //setup the right side button
     UIButton *rightSideButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [rightSideButton setImage:[UIImage imageNamed:@"icon_rightarrow.png"] forState:UIControlStateNormal];
     [rightSideButton setImage:[UIImage imageNamed:@"icon_rightarrow.png"]  forState:UIControlStateHighlighted];
     rightSideButton.frame = CGRectMake(0, 0, 20.0f, 44.0f);
-    rightSideButton.userInteractionEnabled = NO;
+    [rightSideButton addTarget:self action:@selector(buttonClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
     _slideSwitchView.rigthSideButton = rightSideButton;
     
     [_slideSwitchView buildUI];
@@ -71,15 +74,39 @@
     
 }
 
+-(IBAction)buttonClicked:(id)sender {
+    static NSDictionary *dict = nil;
+    static NSInteger count = 0;
+    
+    if(dict == nil) {
+        dict = @{ @"Red" : [UIColor redColor],
+                  @"Green" : [UIColor greenColor],
+                  @"Blue" : [UIColor blueColor],
+                  @"Yellow" : [UIColor yellowColor]
+                  };
+    }
+    
+    NSString *color = [[dict allKeys] objectAtIndex:count++];
+    
+    UIViewController *vc = [[UIViewController alloc] init];
+    vc.title = color;
+    vc.view.backgroundColor = dict[color];
+    [_subViewContollers addObject:vc];
+    
+    [_slideSwitchView reloadData];
+    
+    //select the created tab
+    [_slideSwitchView selectTab:count-1];
+    
+    NSLog(@"button clicked");
+}
+
 - (void)initSubViewControllers {
     
-    NSDictionary *dict = @{ @"Red" : [UIColor redColor],
-                            @"Green" : [UIColor greenColor],
-                            @"Blue" : [UIColor blueColor],
-                            @"Yellow" : [UIColor yellowColor]
-                            };
-    _subViewContollers = [[NSMutableArray alloc] initWithCapacity:dict.count];
     
+    _subViewContollers = [[NSMutableArray alloc] init];
+    
+#if 0
     for(NSString *color in dict.allKeys) {
         UIColor *colorValue = dict[color];
         UIViewController *vc = [[UIViewController alloc] init];
@@ -87,6 +114,7 @@
         vc.view.backgroundColor = colorValue;
         [_subViewContollers addObject:vc];
     }
+#endif
 }
 
 - (void)didReceiveMemoryWarning {

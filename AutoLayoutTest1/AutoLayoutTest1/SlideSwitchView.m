@@ -44,6 +44,7 @@ static const NSUInteger kTagOfRightSideButton = 999;
     [self addSubview:_rootScrollView];
     
     _viewArray = [[NSMutableArray alloc] init];
+    _nameButtons = [[NSMutableArray alloc] init];
     
     _isBuildUI = NO;
     
@@ -144,6 +145,30 @@ static const NSUInteger kTagOfRightSideButton = 999;
     [self setNeedsLayout];
 }
 
+-(void)reloadData {
+    //use a simple solution, remove all the things, then build them again.
+    [_viewArray removeAllObjects];
+    [_nameButtons removeAllObjects];
+    
+    for( UIView* view in _rootScrollView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    for( UIButton *button in _nameButtons) {
+        [button removeFromSuperview];
+    }
+    
+    
+    [self buildUI];
+}
+
+-(void)selectTab:(NSInteger)number {
+    if(number >= 0 && number < _nameButtons.count) {
+        UIButton* namedButton = [_nameButtons objectAtIndex:number];
+        [self selectNameButton:namedButton];
+    }
+}
+
 /*!
  * @method 初始化顶部tab的各个按钮
  * @abstract
@@ -153,10 +178,12 @@ static const NSUInteger kTagOfRightSideButton = 999;
  */
 - (void)createNameButtons
 {
-    
+    if(_shadowImageView == nil) {
     _shadowImageView = [[UIImageView alloc] init];
     [_shadowImageView setImage:_shadowImage];
     [_topScrollView addSubview:_shadowImageView];
+    }
+
     
     //顶部tabbar的总长度
     CGFloat topScrollViewContentWidth = kWidthOfButtonMargin;
@@ -177,10 +204,12 @@ static const NSUInteger kTagOfRightSideButton = 999;
         xOffset += textSize.width + kWidthOfButtonMargin;
         
         [button setTag:i+100];
+#if 0
         if (i == 0) {
             _shadowImageView.frame = CGRectMake(kWidthOfButtonMargin, 0, textSize.width, _shadowImage.size.height);
             button.selected = YES;
         }
+#endif
         [button setTitle:vc.title forState:UIControlStateNormal];
         button.titleLabel.font = [UIFont systemFontOfSize:kFontSizeOfTabButton];
         [button setTitleColor:self.tabItemNormalColor forState:UIControlStateNormal];
@@ -189,6 +218,7 @@ static const NSUInteger kTagOfRightSideButton = 999;
         [button setBackgroundImage:self.tabItemSelectedBackgroundImage forState:UIControlStateSelected];
         [button addTarget:self action:@selector(selectNameButton:) forControlEvents:UIControlEventTouchUpInside];
         [_topScrollView addSubview:button];
+        [_nameButtons addObject:button];
     }
     
     //设置顶部滚动视图的内容总尺寸
@@ -197,6 +227,11 @@ static const NSUInteger kTagOfRightSideButton = 999;
 
 
 #pragma mark - 顶部滚动视图逻辑方法
+
+-(void)configShadowImage:(CGRect)frame {
+    
+    _shadowImageView.frame = frame;
+}
 
 /*!
  * @method 选中tab时间
